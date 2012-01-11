@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120111145052) do
+ActiveRecord::Schema.define(:version => 20120111155328) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -45,5 +45,26 @@ ActiveRecord::Schema.define(:version => 20120111145052) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "users", :force => true do |t|
+    t.string   "username",                        :null => false
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
+    t.datetime "last_login_at"
+    t.datetime "last_logout_at"
+    t.datetime "last_activity_at"
+  end
+
+  add_index "users", ["last_logout_at", "last_activity_at"], :name => "index_users_on_last_logout_at_and_last_activity_at"
+  add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token"
 
 end
