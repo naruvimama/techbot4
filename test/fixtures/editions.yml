@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  no: 1
+  area: MyString
+  week_no: 1
+  year: 1
+  url: MyString
+  downloaded: 1
+  publish_date: 2012-01-14
+
+two:
+  no: 1
+  area: MyString
+  week_no: 1
+  year: 1
+  url: MyString
+  downloaded: 1
+  publish_date: 2012-01-14
