@@ -4,6 +4,7 @@
     <a href=<%= read_article_path article %> > 
       <h1 class="title"> <%= article.title %> </h1>
     </a>
+      <h1 class="title"> <%= article.edition.no %> </h1>
     <span class="mini-bar">
       <p class="date"><%= "#{article.publish_date.to_date} ( #{pluralize article.comments_attracted, 'comment'} )"%></p>
     </span>
