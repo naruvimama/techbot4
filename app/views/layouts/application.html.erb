@@ -7,8 +7,48 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container">
+  <header>
+  	<section class="users_area">
+  		<% if logged_in? %>
+        <span class="user_message"><%= "Logged in as #{current_user.username}"%></span>
+        <%= link_to "Sign out", logout_path, {:class => "sign_out_btn"} %>
+  		<%else%>
+        <%= link_to "Sign in", login_path, {:class=>"sign_in_btn"} %>
+        <%= link_to "Sign up", register_path, {:class=>"sign_up_btn"} %>
+  		<%end%>
+  	</section>
+  	<nav>
+      <ul>
+  		<li><a class="border-radius" href="/home">Latest</a></li>
+  		<li><a class="border-radius" href="/editions/index">Archive</a></li>
+  		<li><a class="border-radius" href="/editions/download">Download</a></li>
+  		<li><a class="border-radius" href="/contribute">Contribute</a></li>
+  		<li><a class="border-radius" href="/advertise">Advertise</a></li>
+  		<li><a class="border-radius" href="/about_us">About us</a></li>	
+      </ul>
+  	</nav>
+  </header>
+  <% if flash.now["alert"] %> 
+    <div class="alert">
+      <ul>
+      <% flash.now["alert"].each do |aler| %>
+        <li><%= aler %></li>
+      <%end%>
+      </ul>
+    </div>
+  <%end%>
+  <% if flash.now["notice"] %> 
+    <div class="notice">
+      <ul>
+      <% flash.now["notice"].each do |notice| %>
+        <li><%= notice %></li>
+      <%end%>
+      </ul>
+    </div>
+  <%end%>
+  <%= yield %>
+  <footer></footer>
+</div>
 </body>
 </html>

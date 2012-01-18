@@ -1,0 +1,82 @@
+.container {
+  width:1140px;
+  margin:auto;
+  padding:0px;
+}
+
+header {
+  width:1040px;
+  height:140px;
+  margin:0px;
+  border:none;
+  padding:20px 0px 0px 30px;
+}
+
+nav {
+  float:left;
+  height:80px;
+  display:block;
+  clear:both;
+  ul{
+      padding:3px 0px;
+    }
+    li {
+        display:inline-block;
+        list-style-type:none;
+        font-size:18px;
+        margin:0px;
+        padding:0px;
+        a {
+            color: #ddd !important;
+            background-color:#222 !important;
+            text-decoration:none !important;
+            margin:0px !important;
+            padding:10px !important;
+            &:hover {
+            color:black !important;
+            background-color:white !important;
+          }
+        }
+    }   
+
+}
+
+.users_area {
+  padding:10px 20px;
+  margin: 10px;
+  float:right;
+  .sign_in_btn, .sign_up_btn, .sign_out_btn {
+    cursor:pointer;
+    padding:4px 6px;
+    margin:2px 4px;
+    border:1px solid green;
+    text-decoration:none;
+    border-radius: 12px;
+  }
+}
+.comment_area{
+  .sign_in_btn, .sign_up_btn, .sign_out_btn {
+    cursor:pointer;
+    padding:4px 6px;
+    margin:2px 4px;
+    border:2px solid green;
+  }
+}
+  
+.stacked_form {
+  border:2px dashed #888;
+  background-color:#dee;//#253478;
+  padding:20px;
+  label {display:block;clear:left;margin-bottom:4px;}
+  input {display:block;clear:both;margin-bottom:15px;}
+}
+
+.title {
+  font-size:24px;
+}
+.abstract {
+  font-size:18px;
+  color:#667720;
+}
+
+

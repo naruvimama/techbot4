@@ -1,0 +1,12 @@
+<div class="edition box-shadow">
+	
+  <% @articles.each do |article| %>
+    <a href=<%= read_article_path article %> > 
+      <h1 class="title"> <%= article.title %> </h1>
+    </a>
+    <span class="mini-bar">
+      <p class="date"><%= "#{article.publish_date.to_date} ( #{pluralize article.comments_attracted, 'comment'} )"%></p>
+    </span>
+    <h2 class="abstract"><%= article.abstract %></h2>
+  <% end %>
+</div>
