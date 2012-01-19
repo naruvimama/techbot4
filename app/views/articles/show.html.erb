@@ -1,13 +1,13 @@
 <div class="article">
 	
-  <h1 class="title"><%= @article.title %></h1>
+  <h1 class="title"><%= raw(@article.title) %></h1>
   <span class="mini-bar">
     <p class="date"><%= "#{@article.publish_date.to_date} ( #{pluralize @article.comments_attracted, 'comment'} )"%></p>
   </span></br>
   
-  <h2 class="abstract"><%= @article.abstract %></h2>
+  <h2 class="abstract"><%= raw(@article.abstract) %></h2>
   <div class="content">
-    <%= @article.story %> 
+    <%= raw(@article.story) %> 
   </div>
 
   <div class="comments"> 
