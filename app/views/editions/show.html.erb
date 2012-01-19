@@ -1,6 +1,11 @@
 <div class="edition box-shadow">
 	
   <% @articles.each do |article| %>
+    <% if article.picture %>
+      <div class="theme-picture">
+    	<%= image_tag article.picture.image%>
+      </div>
+    <% end %>
     <a href=<%= read_article_path article %> > 
       <h1 class="title"> <%= article.title %> </h1>
     </a>
