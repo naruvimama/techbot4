@@ -1,0 +1,6 @@
+<%= form_for [:admin, @picture], :multipart => true do |pic|%>
+  <%= pic.label :label, "Label"%>
+  <%= pic.text_field :label, :size=>100, :width=>50 %>
+  <%= pic.file_field :image%>
+  <%= pic.submit :commit%>
+<%end%>
