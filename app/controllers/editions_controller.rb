@@ -2,7 +2,7 @@ class EditionsController < ApplicationController
   
   def latest
     @edition = Edition.latest
-    @articles = @edition.articles.order("rank ASC")
+    @articles = @edition.articles.published.order("rank ASC")
     render :show
   end
   

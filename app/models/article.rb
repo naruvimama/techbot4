@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
   belongs_to :edition
   belongs_to :picture
   serialize :tags
+  scope :published, where(:publish => true)
   
   def add_tags(str)
     str.split(",").each do |tg|
