@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  label: MyString
+  label: LCA tejas
   dim_x: 1
   dim_y: 1
-  image: MyString
+  image: LCA_tejas.jpeg
 
 two:
-  label: MyString
+  label: FGFA
   dim_x: 1
   dim_y: 1
-  image: MyString
+  image: FGFA.png

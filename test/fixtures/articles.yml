@@ -3,21 +3,23 @@
 one:
   edition_id: 1
   author_id: 1
-  title: MyString
-  abstract: MyText
+  title: Nuclear power boon or bane
+  abstract: Is nuclear power really significant.
   publish_date: 2012-01-14 18:13:02
-  story: MyText
+  story: Contrary to what people opine about though risky nuclear enery is indespensable.
   rank: 1
   reads: 1
   comments_attracted: 1
+  tags: []
 
 two:
   edition_id: 1
   author_id: 1
-  title: MyString
-  abstract: MyText
+  title: Tata nano looking beyond the cheap tag.
+  abstract: Tata Nano is sold as the cheapest car in the world. But looking beyond that it is also the biggest positive revolution in the Automotive industry.
   publish_date: 2012-01-14 18:13:02
-  story: MyText
+  story: Tata Nano is sold as the cheapest car in the world. But looking beyond that it is also the biggest positive revolution in the Automotive industry.
   rank: 1
   reads: 1
   comments_attracted: 1
+  tags: []
