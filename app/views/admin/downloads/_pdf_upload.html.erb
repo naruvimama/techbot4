@@ -1,0 +1,7 @@
+<%=form_for [:admin, @download], :multipart => true do |f|%>
+  <%= f.label :edition %>
+  <%= f.select(:edition_id, options_for_select(Edition.order("number DESC").collect {|e| [e.number, e.id]})) %>
+  <%= f.text_field :area %>
+  <%= f.file_field :pdf %>
+  <%= f.submit :upload%>
+<%end%>
