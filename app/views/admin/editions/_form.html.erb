@@ -1,0 +1,5 @@
+<%= semantic_form_for [:admin, @edition] do |f| %>
+  <%= f.inputs :number, :week_no, :year, :publish_date, :publish %>
+  <%= f.file_field :image %>
+  <%= f.submit :create %>
+<%end%>

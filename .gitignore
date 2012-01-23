@@ -13,3 +13,13 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore all uploaded media
+*.pdf
+*.mp3
+*.jpeg
+*.jpg
+*.png
+*.gif
+*.tif
+

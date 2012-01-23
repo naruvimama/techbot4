@@ -1,5 +1,7 @@
 Techbot3::Application.routes.draw do
 
+  get "archives/index"
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
