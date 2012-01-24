@@ -1,7 +1,5 @@
 Techbot3::Application.routes.draw do
 
-  get "archives/index"
-
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -20,6 +18,9 @@ Techbot3::Application.routes.draw do
   # Root path management
   root :to => 'editions#latest'
   get 'home' => 'editions#latest', :as => :home
+  
+  # Read editions
+  get 'archive' => 'editions#index', :as => :archive
   
   # Read edition
   get 'editions/:id' => 'editions#show', :as => :read_edition

@@ -1,0 +1,12 @@
+<%= semantic_form_for [:admin, @article] do |f|%>
+  <%= f.inputs :title, :publish_date, :rank, :reads, :comments_attracted, :publish %>
+  <div class="preview">
+    <%= f.inputs :abstract, :story %>
+  </div>
+  <%= f.inputs do %>
+    <%= f.input :picture, :as=> :select, :collection => options_from_collection_for_select(Picture.order("updated_at DESC"), "id", "label", @article.picture.id) %>
+    <%= f.input :edition, :as=> :select, :collection => options_from_collection_for_select(Edition.order("number DESC"), "id", "number", @article.edition.id) %>
+    <%= f.buttons %>
+  <%end%>
+<%end%>
+

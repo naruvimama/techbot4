@@ -5,6 +5,10 @@ class EditionsController < ApplicationController
     @articles = @edition.articles.published.order("rank ASC")
     render :show
   end
+
+  def index
+    @editions = Edition.published.order("number DESC")
+  end
   
   def show
     @edition = Edition.find(params[:id])
