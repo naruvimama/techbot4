@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Techbot3</title>
+  <title>Techbot</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="topbar">
+    <div class="topbar-inner">
 <div class="container">
   <header>
-  	<section class="users_area">
-  		<% if logged_in? %>
-        <span class="user_message"><%= "Logged in as #{current_user.username}"%></span>
-        <%= link_to "Sign out", logout_path, {:class => "sign_out_btn"} %>
-  		<%else%>
-        <%= link_to "Sign in", login_path, {:class=>"sign_in_btn"} %>
-        <%= link_to "Sign up", register_path, {:class=>"sign_up_btn"} %>
-  		<%end%>
-  	</section>
+    <a class="logo">Techbot</a>
   	<nav>
       <ul>
   		<li><a class="border-radius" href="/home">Latest</a></li>
@@ -27,28 +21,41 @@
   		<li><a class="border-radius" href="/about_us">About us</a></li>	
       </ul>
   	</nav>
+  	<section class="users_area">
+  		<% if logged_in? %>
+        <span class="user_message"><%= "Logged in as #{current_user.username}"%></span>
+        <%= link_to "Sign out", logout_path, {:class => "sign_out_btn"} %>
+  		<%else%>
+        <%= link_to "Sign in", login_path, {:class=>"sign_in_btn"} %>
+        <%= link_to "Sign up", register_path, {:class=>"sign_up_btn"} %>
+  		<%end%>
+  	</section>
     </header>
+    </div>
+    </div>
     <div class="row">
       <% if flash.now["alert"] %> 
-    <div class="alert">
-      <ul>
-      <% flash.now["alert"].each do |aler| %>
-        <li><%= aler %></li>
+        <div class="alert">
+          <ul>
+          <% flash.now["alert"].each do |aler| %>
+            <li><%= aler %></li>
+          <%end%>
+          </ul>
+        </div>
       <%end%>
-      </ul>
-    </div>
-  <%end%>
-  <% if flash.now["notice"] %> 
-    <div class="notice">
-      <ul>
-      <% flash.now["notice"].each do |notice| %>
-        <li><%= notice %></li>
+      <% if flash.now["notice"] %> 
+        <div class="notice">
+          <ul>
+          <% flash.now["notice"].each do |notice| %>
+            <li><%= notice %></li>
+          <%end%>
+          </ul>
+        </div>
       <%end%>
-      </ul>
     </div>
-  <%end%>
-  </div>
-  <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   <footer></footer>
 </div>
 </body>
