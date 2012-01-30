@@ -1,3 +1,17 @@
 // Place all the styles related to the editions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.archive-edition{
+  list-style:none;
+  padding:10px;
+  margin:5px;
+  img{
+    padding:10px;
+  }
+  a{
+    padding-left:15px;
+  }
+  &:hover{
+    background:#8b9;
+  }
+}

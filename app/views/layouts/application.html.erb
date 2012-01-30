@@ -9,10 +9,10 @@
 <body>
   <div class="topbar">
     <div class="topbar-inner">
-<div class="container">
-  <header>
-    <a class="logo">Techbot</a>
-  	<nav>
+      <div class="container">
+  <header class="row">
+    <a class="logo span3">Techbot</a>
+  	<nav class="span10">
       <ul>
   		<li><a class="border-radius" href="/home">Latest</a></li>
   		<li><a class="border-radius" href="/archive">Archive/Downloads</a></li>
@@ -21,7 +21,7 @@
   		<li><a class="border-radius" href="/about_us">About us</a></li>	
       </ul>
   	</nav>
-  	<section class="users_area">
+  	<section class="users_area span3">
   		<% if logged_in? %>
         <span class="user_message"><%= "Logged in as #{current_user.username}"%></span>
         <%= link_to "Sign out", logout_path, {:class => "sign_out_btn"} %>
@@ -33,7 +33,9 @@
     </header>
     </div>
     </div>
-    <div class="row">
+    </div>
+
+    <div class="alert-bar">
       <% if flash.now["alert"] %> 
         <div class="alert">
           <ul>
@@ -53,7 +55,8 @@
         </div>
       <%end%>
     </div>
-    <div class="container">
+
+    <div class="main-content container">
       <%= yield %>
     </div>
   <footer></footer>

@@ -1,9 +1,18 @@
-<li class="archive-edition">
-  <%= image_tag edition.image_url.to_s %>
-  <%= link_to "Read online ", read_edition_path(edition) %>
-  <ul>
-      <% edition.downloads.each do |download|%>
-        <%= link_to "Download pdf - ".concat( download.area), download.pdf.to_s %>
-    <%end%>
-  </ul>
+<li class="archive-edition row">
+  <div class="span5">
+    <%= image_tag edition.image_url.to_s, :size=> "200x250" %>
+  </div>
+  <div class="span9">
+    <ul>
+      <% edition.articles.published.each do |article| %>
+        <li><%= article.title %></li>
+      <%end%>
+    </ul>  
+    <%= link_to "Read online ", read_edition_path(edition) %>
+  </div>  
 </li>
+  <span>
+    <% edition.downloads.each do |download|%>
+      <%= link_to "Download pdf - ".concat( download.area), download.pdf.to_s %>
+    <%end%>
+  </span>
