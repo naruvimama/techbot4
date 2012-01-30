@@ -49,16 +49,17 @@ $topbar-height:60px;
   .header{
   }
   li{
-    display:inline;
+    display:inline-block;
+    position:relative;
+    top:10px;
     a{   
       text-decoration:none;
       font-size:18px;
       margin:0px 2px;
-      padding:0px 2px; 
+      padding:0px 6px 0px 2px; 
     }  
   }
   ul{
-    color:#833;
   }
   .users_area{
     display:inline-block;
@@ -71,4 +72,21 @@ $topbar-height:60px;
 
 .main-content{
   padding:50px 0px;
+}
+
+.divider {
+  border-right:2px solid;
+}
+
+.orange{
+  border-right-color:#fd3301;
+}
+.lime-green{
+  border-right-color:#8ae234;
+}
+.yellow{
+  border-right-color:#fce94f;
+}
+.cobalt{
+  border-right-color:#ef2929;
 }
