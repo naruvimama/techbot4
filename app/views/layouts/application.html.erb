@@ -12,7 +12,7 @@
       <div class="container">
   <header class="row">
     <a class="logo span3">Techbot</a>
-  	<nav class="span10">
+  	<nav class="span9">
       <ul>
   		<li><a class="border-radius" href="/home">Latest</a></li>
   		<li><a class="border-radius" href="/archive">Archive/Downloads</a></li>
@@ -21,13 +21,12 @@
   		<li><a class="border-radius" href="/about_us">About us</a></li>	
       </ul>
   	</nav>
-  	<section class="users_area span3">
+  	<section class="users_area span4">
   		<% if logged_in? %>
-        <span class="user_message"><%= "Logged in as #{current_user.username}"%></span>
-        <%= link_to "Sign out", logout_path, {:class => "sign_out_btn"} %>
+        <%= link_to "Sign out #{current_user.username}", logout_path, {:class => "btn danger"} %>
   		<%else%>
-        <%= link_to "Sign in", login_path, {:class=>"sign_in_btn"} %>
-        <%= link_to "Sign up", register_path, {:class=>"sign_up_btn"} %>
+        <%= link_to "Sign in", login_path, {:class=>"btn success"} %>
+        <%= link_to "Sign up", register_path, {:class=>"btn info"} %>
   		<%end%>
   	</section>
     </header>
