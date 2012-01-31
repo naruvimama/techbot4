@@ -1,5 +1,5 @@
 <div class="sign-in-form container">
-  <%= form_tag sessions_path, :class => "form-stacked" do  %>
+  <%= form_tag sessions_path, :class => "form-stacked span4" do  %>
     <h2>Log in</h2>
     <div class="field">
       <%= label_tag :email %>
@@ -9,12 +9,11 @@
       <%= label_tag :password  %>
       <%= password_field_tag :password, params[:password]  %>
     </div>
-    <ul><li><label>
+    <div class="input-prepend">
       <%= check_box_tag :remember_me, params[:remember_me]  %>
       <span>Remember me</span>
-    </label></li></ul>
-    <div class="button">
-      <%= submit_tag "Log in"%>
     </div>
+    <hr/>
+    <%= submit_tag "Log in", :class=>"btn success"%>
   <% end %>
 </div>
