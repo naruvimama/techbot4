@@ -2,7 +2,7 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
-Rails.application.config.sorcery.submodules = [:remember_me, :reset_password, :activity_logging]
+Rails.application.config.sorcery.submodules = [:remember_me, :reset_password, :activity_logging, :external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -36,7 +36,7 @@ Rails.application.config.sorcery.configure do |config|
   # config.register_last_activity_time = true                         # will register the time of last user action, every action.
 
   # -- external --
-  # config.external_providers = []                                    # What providers are supported by this app,
+  config.external_providers = [:twitter, :facebook, :google]                                    # What providers are supported by this app,
                                                                       # i.e. [:twitter, :facebook, :github, :google, :liveid] .
   # config.ca_file = 'path/to/ca_file'                                # Path to ca_file. By default use a internal ca-bundle.crt.
                                                                       # You can change it by your local ca_file.
@@ -45,25 +45,25 @@ Rails.application.config.sorcery.configure do |config|
   # Twitter wil not accept any requests nor redirect uri containing localhost,
   # make sure you use 0.0.0.0:3000 to access your app in development
   #
-  # config.twitter.key = "eYVNBjBDi33aa9GkA3w"
-  # config.twitter.secret = "XpbeSdCoaKSmQGSeokz5qcUATClRW5u08QWNfv71N8"
-  # config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
-  # config.twitter.user_info_mapping = {:email => "screen_name"}
+  config.twitter.key = "4y4gKWelLYnKll1iBwfrA"
+  config.twitter.secret = "36Umbqo25OZer6PmO3xYKE0kk13Pw86HdBgMamACX0"
+  config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
+  config.twitter.user_info_mapping = {:email => "screen_name", :username => "screen_name"}
   #
-  # config.facebook.key = "34cebc81c08a521bc66e212f947d73ec"
-  # config.facebook.secret = "5b458d179f61d4f036ee66a497ffbcd0"
-  # config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
-  # config.facebook.user_info_mapping = {:email => "name"}
+  config.facebook.key = "226283357460503"
+  config.facebook.secret = "0e1d50885856430fde093c8a91e37d9a"
+  config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
+  config.facebook.user_info_mapping = {:email => "name"}
   #
   # config.github.key = ""
   # config.github.secret = ""
   # config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
   # config.github.user_info_mapping = {:email => "name"}
   #
-  # config.google.key = "491253340633.apps.googleusercontent.com"
-  # config.google.secret = "4oE6kXqbL_LN-VGcGcg7qgdL"
-  # config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
-  # config.google.user_info_mapping = {:email => "email", :username => "name"}
+  config.google.key = "www.techbot.in"
+  config.google.secret = "DkTrt0n2XRJlYlnBBOFmF2Wm"
+  config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
+  config.google.user_info_mapping = {:email => "email", :username => "name"}
   #
   # To use liveid in development mode you have to replace mydomain.com with
   # a valid domain even in development. To use a valid domain in development

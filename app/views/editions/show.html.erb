@@ -1,4 +1,4 @@
-<div class="edition box-shadow">
+<div class="edition span12">
 	
   <% @articles.each do |article| %>
     <% if article.picture %>
@@ -12,6 +12,6 @@
     <span class="mini-bar">
       <p class="date"><%= "#{article.publish_date.to_date} ( #{pluralize article.comments_attracted, 'comment'} )"%></p>
     </span>
-    <h2 class="abstract"><%= article.abstract %></h2>
+    <p class="abstract"><%= article.abstract %></p>
   <% end %>
 </div>

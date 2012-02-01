@@ -1,6 +1,11 @@
 <div class="sign-in-form container">
   <%= form_tag sessions_path, :class => "form-stacked span4" do  %>
-    <h2>Log in</h2>
+    <h2>Sign in</h2>
+    <div class="external-auth span4">
+      <a class=""><%= image_tag "facebook.png" %></a>
+      <a class=""><%= image_tag "google.png" %></a>
+      <a class=""><%= image_tag "twitter.png" %></a>
+    </div>
     <div class="field">
       <%= label_tag :email %>
       <%= email_field_tag :email, params[:email] %>
