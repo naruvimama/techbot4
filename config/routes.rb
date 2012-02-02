@@ -27,4 +27,6 @@ Techbot3::Application.routes.draw do
   get 'articles/:id' => 'articles#show', :as => :read_article
   post 'articles/:id/comment' => 'comments#create', :as => :post_comment
 
+  # Get feedback
+  post "feedback" => "feedbacks#create"
 end

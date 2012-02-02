@@ -7,4 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require ICanHaz
+//= require comments
+//= require feedbacks
 //= require_tree .

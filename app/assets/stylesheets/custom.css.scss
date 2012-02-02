@@ -60,3 +60,30 @@ $yellow:#fce94f;
   margin:0px;
   border-bottom:2px solid $orange; 
 }
+
+#feedback-btn {
+  width:20px;
+  position:fixed;
+  top:150px;
+  right:0px;
+  color:#eee;
+  background-color:$orange;
+  line-height:1em;
+}
+#feedback{
+  width:230px;
+  padding:15px;
+  position:fixed;
+  top:150px;
+  right:0px;
+  border:1px solid #777;
+  background:#eee;
+  form{
+    margin:0px;
+    padding:0px;
+  }
+  input, select {
+    clear:both;
+    padding-right:10px;
+  }
+}

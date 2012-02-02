@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="feedback-btn"></div>
-  <div id="feedback">
+  <h1> Not vissible</h1>
+  <div id="feedback-btn"><%= image_tag "feedback.png" %></div>
+  <div id="feedback" class="hidden">
+    <%= form_tag feedback_path, :method => :post, :remote => true, :class=>"form-stacked"  do |f|%>
+      <%= select_tag :type, options_for_select([["Positive", 1],["Negative", 2],["Neutral", 3]],"positive")%>
+      <%= label_tag :info,"Comment" %>
+      <%= text_area_tag :info %><hr/>
+      <%= submit_tag :post, :class=> "btn success"%>
+      <%= button_tag :cancel, :class=> "btn danger cancel"%>
+    <%end%>
+  </div>
   <div class="topbar">
     <div class="topbar-inner">
       <div class="container">
