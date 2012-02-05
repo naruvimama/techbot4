@@ -69,6 +69,7 @@ $yellow:#fce94f;
   color:#eee;
   background-color:$orange;
   line-height:1em;
+  cursor:pointer;
 }
 #feedback{
   width:230px;
@@ -86,4 +87,10 @@ $yellow:#fce94f;
     clear:both;
     padding-right:10px;
   }
+}
+
+#comment_comment{
+  width:90%;
+  padding:20px 30px;
+  margin:20px 30px;
 }

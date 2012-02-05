@@ -23,3 +23,6 @@
 *.gif
 *.tif
 
+# Ignore all swap files
+*.swp
+*.swo

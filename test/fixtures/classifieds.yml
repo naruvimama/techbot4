@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  edition_id: 1
+  area: MyString
+  category_id: 1
+  content: MyText
+
+two:
+  edition_id: 1
+  area: MyString
+  category_id: 1
+  content: MyText

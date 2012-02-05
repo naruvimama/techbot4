@@ -4,9 +4,13 @@ class FeedbacksController < ApplicationController
     if current_user
       @feedback.user_id = current_user.id
     end
-    @feedback.save
+    
     respond_to do |f|
-      f.json { render :json => {:success => true}}
+      if @feedback.save
+        f.json { render :json => {:success => true}}
+      else
+        f.json { render :json => {:success => false}}
+      end
     end
   end
 end

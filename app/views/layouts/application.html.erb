@@ -12,9 +12,9 @@
   <div id="feedback" class="hidden">
     <%= form_tag feedback_path, :method => :post, :remote => true, :class=>"form-stacked"  do |f|%>
       <%= select_tag :type, options_for_select([["Positive", 1],["Negative", 2],["Neutral", 3]],"positive")%>
-      <%= label_tag :info,"Comment" %>
+      <%= label_tag :info,"Feedback" %>
       <%= text_area_tag :info %><hr/>
-      <%= submit_tag :post, :class=> "btn success"%>
+      <%= submit_tag :post, :class=> "btn success submit"%>
       <%= button_tag :cancel, :class=> "btn danger cancel"%>
     <%end%>
   </div>
