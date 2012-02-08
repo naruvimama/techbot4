@@ -1,6 +1,5 @@
 <div class="sign-up-form container">
-  <h2>Sign Up</h2>
-  <%= form_for @user, :html =>{:class => "form-stacked"} do |f| %>
+  <%= form_for @user, :html =>{:class => "form-stacked span4"} do |f| %>
     <% if @user.errors.any? %>
       <div class="error_messages">
         <h2>Form is invalid</h2>
@@ -11,6 +10,12 @@
         </ul>
       </div>
     <% end %>
+    <h2>Sign Up</h2>
+    <div class="external-auth span4">
+      <a class="" href=<%= auth_at_provider_path(:provider => :facebook) %>><%= image_tag "facebook.png" %></a>
+      <a class="" href=<%= auth_at_provider_path(:provider => :google) %>><%= image_tag "google.png" %></a>
+      <a class="" href=<%= auth_at_provider_path(:provider => :twitter) %>><%= image_tag "twitter.png" %></a>
+    </div>
 
     <div class="field">
       <%= f.label :username %>

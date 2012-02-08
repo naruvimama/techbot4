@@ -1,5 +1,9 @@
 Techbot3::Application.routes.draw do
 
+  match "oauth/callback" => "oauths#callback"
+
+  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

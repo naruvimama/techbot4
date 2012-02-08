@@ -2,9 +2,9 @@
   <%= form_tag sessions_path, :class => "form-stacked span4" do  %>
     <h2>Sign in</h2>
     <div class="external-auth span4">
-      <a class=""><%= image_tag "facebook.png" %></a>
-      <a class=""><%= image_tag "google.png" %></a>
-      <a class=""><%= image_tag "twitter.png" %></a>
+      <a class="" href=<%= auth_at_provider_path(:provider => :facebook) %>><%= image_tag "facebook.png" %></a>
+      <a class="" href=<%= auth_at_provider_path(:provider => :google) %>><%= image_tag "google.png" %></a>
+      <a class="" href=<%= auth_at_provider_path(:provider => :twitter) %>><%= image_tag "twitter.png" %></a>
     </div>
     <div class="field">
       <%= label_tag :email %>

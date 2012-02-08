@@ -53,7 +53,8 @@ Rails.application.config.sorcery.configure do |config|
   config.facebook.key = "226283357460503"
   config.facebook.secret = "0e1d50885856430fde093c8a91e37d9a"
   config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
-  config.facebook.user_info_mapping = {:email => "name"}
+  config.facebook.user_info_mapping = {:email => "email", :name => "name", :username =>"username"}
+	config.facebook.scope = "email, offline_access"
   #
   # config.github.key = ""
   # config.github.secret = ""
