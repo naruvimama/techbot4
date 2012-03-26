@@ -1,3 +1,34 @@
 // Place all the styles related to the classifiedspreads controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$cl-it-width: 16em;
+$cl-area-column-gap: 1em;
+
+.classified-area{
+  margin-top:20px;
+  padding:5px;
+  
+  -moz-column-width: $cl-it-width;
+  -webkit-column-width: $cl-it-width;
+  column-width: $cl-it-width;
+  -moz-column-gap: $cl-area-column-gap;
+  -webkit-column-gap: $cl-area-column-gap;
+  column-gap: $cl-area-column-gap;
+  
+  .cl-category{
+    position:relative;
+    width:$cl-it-width;
+    height:auto;
+    background-color:#333;
+    color:#eef;
+    font-size:20px;
+    
+  }
+  .cl-item{
+    position:relative;
+    width:100%;
+    height:auto;
+    clear:both;
+  }
+  
+}

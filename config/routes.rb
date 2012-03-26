@@ -35,5 +35,9 @@ Techbot3::Application.routes.draw do
   post "feedback" => "feedbacks#create"
   
   # classified
-  resources :classifiedspreads, :only =>[:index,:show]
+  resources :classifiedspreads, :only =>[:index,:show] do
+    member do
+      get :latest
+    end
+  end
 end

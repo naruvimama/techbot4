@@ -34,5 +34,10 @@ ActiveAdmin::Dashboards.build do
   #   section "Recent User", :priority => 1
   #
   # Will render the "Recent Users" then the "Recent Posts" sections on the dashboard.
+  section "Trigger all classified generation" do
+    div do
+      span link_to("Trigger all classified generation", generate_all_admin_classifieds_path )
+    end  
+  end
 
 end

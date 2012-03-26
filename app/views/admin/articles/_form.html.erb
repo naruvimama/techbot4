@@ -4,10 +4,10 @@
     <%= f.inputs :abstract, :story %>
   </div>
   <%= f.inputs do %>
-    <%= f.input :picture, :as=> :select, :collection => options_from_collection_for_select(Picture.order("updated_at DESC"), "id", "label", @article.picture.id) %>
-    <%= f.input :edition, :as=> :select, :collection => options_from_collection_for_select(Edition.order("number DESC"), "id", "number", @article.edition.id) %>
+    <%= f.input :picture, :as=> :select, :collection => options_from_collection_for_select(Picture.order("updated_at DESC"), "id", "label", @article.picture_id) %>
+    <%= f.input :edition, :as=> :select, :collection => options_from_collection_for_select(Edition.order("number DESC"), "id", "number", @article.edition_id) %>
     <%= f.buttons %>
   <%end%>
 <%end%>
-<%= image_tag @article.picture.image %>
+<%= image_tag @article.picture.image if @article.picture %>
 

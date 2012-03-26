@@ -27,4 +27,8 @@ Techbot3::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Activate observers that should always be running
+  config.active_record.observers = :classified_observer
+  
 end

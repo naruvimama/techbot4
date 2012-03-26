@@ -1,5 +1,10 @@
-<div class="edition span12">
-	
+<div class="edition span11">
+  <div class="download-header">
+  	<div class="span2"><h3>Download pdf :</h3></div>
+    <% @edition.downloads.each do |download|%>
+      <h3><%= link_to download.area, download.pdf_url %></h3>	
+    <% end %>
+  </div>
   <% @articles.each do |article| %>
     <% if article.picture %>
       <div class="theme-picture">

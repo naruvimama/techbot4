@@ -1,7 +1,6 @@
-<%= @classified.inspect %>
 <%= semantic_form_for [:admin, @classified] do |f| %>
   <%= f.inputs do %>
-    <%= f.input :classified_category_id, :as => :selector, :collection =>  options_from_collection_for_select(ClassifiedCategory.order("category ASC"), "id", "category", @classified.classified_category_id) %> 
+    <%= f.input :classified_category_id, :as => :select, :collection =>  options_from_collection_for_select(ClassifiedCategory.order("category ASC"), "id", "category", @classified.classified_category_id) %> 
     <%= f.input :edition, :as=> :select, :collection => options_from_collection_for_select(Edition.order("number DESC"), "id", "number", @classified.edition_id) %>
     <%= f.inputs :area, :content %>
     <%= f.buttons%>

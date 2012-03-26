@@ -1,37 +1,23 @@
 $orange:#fd3301;
 $yellow:#fce94f;
 
-.topbar {
-  .logo{
-    font-size:25px;
-    line-height:1.5em;
-  }
-  .header{
-  }
+.navbar{
+  font-size:16px;
   li{
-    display:inline-block;
-    position:relative;
-    top:10px;
-    a{   
-      text-decoration:none;
-      font-size:18px;
-      margin:0px 2px;
-      padding:0px 6px 0px 2px; 
-      &:hover{
-        background:$orange;
-        color:black;
-      }
-    }  
-  }
-  ul{
-  }
-  .users_area{
-    display:inline-block;
     a{
-      border:1px solid #000;
-      margin:3px 4px;
-    }  
+      &:hover{
+        color:#333;
+      }
+    }
   }
+}
+
+.brand.logo{
+  font-size:25px;
+}
+
+.users_area {
+  font-size:16px;
 }
 
 .main-content{

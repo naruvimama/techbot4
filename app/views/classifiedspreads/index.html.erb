@@ -1,10 +1,14 @@
-<div class="span6">
-	<table class="zebra-striped">
-		<th><td>Edition No</td><td>Area</td></th>
-		<% @spitems.each do |sp|%>
-		<tr>
-			<a href=<%= classifiedspreads_path sp %>> <td><%= sp.edition.number %></td> <td><%= sp.area %></td> </a>
-		</tr>
-		<%end%>
-	</table>
+<div class="span10 classified-spread">
+		<span class="btn btn-info">
+		  <%= "Edition : ".concat(@spitems[0].edition.number.to_s) %>	
+		</span>
+		<span class="btn btn-warning">
+		  <%= "Area : ".concat(@spitems[0].area) %>
+		</span>
+	
+    <div class="classified-area">
+    <%= raw(@spitems[0].content_spread) %>
+    </div>
+    <%= paginate @spitems %>
+	
 </div>

@@ -7,7 +7,7 @@ class EditionsController < ApplicationController
   end
 
   def index
-    @editions = Edition.published.order("number DESC")
+    @editions = Edition.published.order("number DESC").page( params[:page] )
   end
   
   def show

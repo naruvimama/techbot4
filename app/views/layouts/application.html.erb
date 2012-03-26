@@ -7,7 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1> Not vissible</h1>
   <div id="feedback-btn"><%= image_tag "feedback.png" %></div>
   <div id="feedback" class="hidden">
     <%= form_tag feedback_path, :method => :post, :remote => true, :class=>"form-stacked"  do |f|%>
@@ -18,26 +17,24 @@
       <%= button_tag :cancel, :class=> "btn danger cancel"%>
     <%end%>
   </div>
-  <div class="topbar">
-    <div class="topbar-inner">
+  <div class="navbar">
+    <div class="navbar-inner">
       <div class="container">
   <header class="row">
-    <a class="logo span3">Techbot</a>
-  	<nav class="span9">
-      <ul>
+    <a class="logo brand span2" href="/home">Techbot</a>
+      <ul class="nav">
         <li><a class="divider orange" href="/home">Latest</a></li>
         <li><a class="divider lime-green" href="/archive">Archive/Downloads</a></li>
-          <li><a class="divider cobolt" href="/classifiedspreads">Classified</a></li>
+        <li><a class="divider cobolt" href="/classifiedspreads">Classified</a></li>
         <li><a class="divider yellow" href="/jobs">Jobs</a></li>
         <li><a href="/contact_us">Contact us</a></li>	
       </ul>
-  	</nav>
-  	<section class="users_area span4">
+  	<section class="btn-group span3">
   		<% if logged_in? %>
-        <%= link_to "Sign out #{current_user.username}", logout_path, {:class => "btn danger"} %>
+        <%= link_to "Sign out #{current_user.username}", logout_path, {:class => "btn btn-warning "} %>
   		<%else%>
-        <%= link_to "Sign in", login_path, {:class=>"btn success"} %>
-        <%= link_to "Sign up", register_path, {:class=>"btn info"} %>
+        <%= link_to "Sign in", login_path, {:class=>"btn btn-success"} %>
+        <%= link_to "Sign up", register_path, {:class=>"btn btn-info"} %>
   		<%end%>
   	</section>
     </header>

@@ -19,6 +19,7 @@
       </div>
     <% end %>
   </div>
+  <%= paginate @comments %>
   
   <div class="comment_area">
   <% if logged_in? %>
@@ -32,9 +33,9 @@
     <% end %>  
   <% else %>
  
-    <h1> To post a comment </h1>   		  
-        <%= link_to "Sign in", login_path, {:class=>"sign_in_btn"} %>
-        <%= link_to "Sign up", register_path, {:class=>"sign_up_btn"} %>
+    <h3> To post a comment </h3>   		  
+        <%= link_to "Sign in", login_path, {:class=>"sign_in_btn btn btn-success"} %>
+        <%= link_to "Sign up", register_path, {:class=>"sign_up_btn btn btn-info"} %>
   
   <% end %>
   </div>
