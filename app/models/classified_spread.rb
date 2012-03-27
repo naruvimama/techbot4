@@ -26,11 +26,11 @@ class ClassifiedSpread < ActiveRecord::Base
     that_spread.save
   end
   def self.generate_classified_strs(ke, items)
-    opt = "<span class='cl-category'>#{ke.titleize}</span></br>"
+    opt =  ''
     items.each do |i|
-      opt.concat( "<span class='cl-item'>#{i}</span><hr/></br>") 
+      opt.concat( "<span>#{i}</span>") 
     end
-    "<span>".concat(opt).concat("</span>")
+    "<li class='cl-head'><a href='#' data-cl-items='#{opt}'>#{ke.titleize}</a></li>"
   end
 end
 

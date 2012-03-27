@@ -1,14 +1,19 @@
 <div class="span10 classified-spread">
-		<span class="btn btn-info">
-		  <%= "Edition : ".concat(@spitems[0].edition.number.to_s) %>	
-		</span>
-		<span class="btn btn-warning">
-		  <%= "Area : ".concat(@spitems[0].area) %>
-		</span>
-	
+  <span class="btn btn-info">
+	<%= "Edition : ".concat(@spitems[0].edition.number.to_s) %>	
+  </span>
+  <span class="btn btn-warning">
+	<%= "Area : ".concat(@spitems[0].area) %>
+  </span>
+  
+  <div class="classified-tabs">		
+	<ul class="nav nav-tabs">
+	  <%= raw(@spitems[0].content_spread) %>
+	</ul>
     <div class="classified-area">
-    <%= raw(@spitems[0].content_spread) %>
+    
     </div>
+  </div>
     <%= paginate @spitems %>
 	
 </div>

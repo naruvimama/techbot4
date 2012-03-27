@@ -15,20 +15,22 @@ $cl-area-column-gap: 1em;
   -webkit-column-gap: $cl-area-column-gap;
   column-gap: $cl-area-column-gap;
   
-  .cl-category{
-    position:relative;
-    width:$cl-it-width;
-    height:auto;
-    background-color:#333;
-    color:#eef;
-    font-size:20px;
-    
-  }
-  .cl-item{
-    position:relative;
-    width:100%;
-    height:auto;
-    clear:both;
+  .cl-head a {
+    border-right:2px solid #333;  
   }
   
+  span{
+   display:block;
+   padding:4px;
+   margin:5px 1px;
+   border:1px dashed #ccc;
+   -moz-border-radius:8px;
+   -webkit-border-radius:8px;
+   border-radius:8px; 
+  }
+  
+}
+
+.classified-tabs{
+  margin-top:10px;
 }
