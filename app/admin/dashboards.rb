@@ -40,4 +40,10 @@ ActiveAdmin::Dashboards.build do
     end  
   end
 
+  section "Ad roulette generation" do
+    div do
+      span link_to("Trigger Ad roulette generation", generate_roulette_admin_advertisements_path )
+    end  
+  end
+
 end

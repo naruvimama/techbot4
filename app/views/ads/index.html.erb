@@ -1,0 +1,7 @@
+<div class= "ads-list">
+  <% @ads.each do |ad| %> 
+    <%= ad.content %>
+    <hr/>
+  <%end%>
+  <%= paginate @ads %>
+</div>

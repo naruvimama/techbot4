@@ -20,16 +20,23 @@
   <div class="navbar">
     <div class="navbar-inner">
       <div class="container">
-  <header class="row">
-    <a class="logo brand span2" href="/home">Techbot</a>
+        <header class="row">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+  <a class="logo brand span2" href="/home">Techbot</a>
+  <div class="nav-collapse">
       <ul class="nav">
         <li><a href="/home">Latest</a></li>
         <li><a href="/archive">Archive/Downloads</a></li>
         <li><a href="/classifiedspreads">Classified</a></li>
         <li><a href="/jobs">Jobs</a></li>
-        <li><a href="/Advertisement">Ads</a></li>
+        <li><a href="/ads">Ads</a></li>
         <li><a href="/contact_us">Contact us</a></li>	
       </ul>
+    </div>
   	<section class="btn-group span3">
   		<% if logged_in? %>
         <%= link_to "Sign out #{current_user.username}", logout_path, {:class => "btn btn-warning "} %>
@@ -67,7 +74,7 @@
     <div class="main-content container">
       <%= yield %>
     </div>
-  <footer></footer>
+  <%= render :partial => "layouts/footer" %>
 </div>
 </body>
 </html>

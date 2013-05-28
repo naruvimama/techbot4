@@ -1,6 +1,7 @@
 Techbot3::Application.routes.draw do
 
   resources :jobs, :only=>[:index, :show]
+  resources :ads, :only => [:index]
 
   match "oauth/callback" => "oauths#callback"
 
@@ -42,4 +43,6 @@ Techbot3::Application.routes.draw do
       get :latest
     end
   end
+  # Static resources  - last line
+  get ":action" => "static#:action"
 end

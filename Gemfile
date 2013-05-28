@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+# source 'http://localhost:8808'
 
 gem 'rails', '>= 3.2.1'
 
@@ -19,6 +20,7 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'activeadmin' 
+gem 'formtastic', "~>2.1.1"
 gem 'meta_search'
 gem 'sorcery'
 gem 'carrierwave'

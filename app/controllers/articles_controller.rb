@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+  caches_page :show
+
   def show
     @article = Article.published.find(params[:id])
     @comments = @article.comments.page(params[:page]).per(10)

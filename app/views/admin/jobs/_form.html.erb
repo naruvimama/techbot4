@@ -1,0 +1,24 @@
+<%= form_for [:admin, @job] do |f| %>
+  <%= f.label :content%>
+  <%= f.text_field :content, :class => "preview_column", :size => "100", :width => "50" %>
+  </br>
+  <%= f.label :listing_content%>
+  <%= f.text_field :listing_content, :class => "preview_column", :size => "100", :width => "50" %>
+  </br>
+  <%= f.label :valid_date%>
+  <%= f.date_select :valid_date %>
+  </br>
+  <%= f.submit %>
+<%end%>
+<div class="preview_area">
+</div> 
+<script type="text/javascript">
+  $('.preview_column').on('change', function(){
+      console.log("Hello world");
+      source_id = $(this).attr("id");
+      $("." + source_id + "_preview").remove();
+      $(".preview_area").append("<div class=" + source_id + "_preview></div>");
+
+      $("." + source_id + "_preview").html($(this).val());
+      }); 
+</script>
